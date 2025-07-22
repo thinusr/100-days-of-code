@@ -1,0 +1,140 @@
+Day-2
+
+1. Data types
+- Strings - any characters between quatation marks e.g. "Hello", "12345"
+- Integers - whole numbers e.g. 12345
+- Floats - Numbers with decimals e.g. 123.45
+- Booleans - True or False - Take note always capitalised.  
+
+Type errors will occur when wrong type is used.
+
+Pulling out characters in a string / Subscripting
+
+print("Hello"[0]) - Output = H
+print("Hello"[4]) - Output = l
+print("Hello"[-1]) - Output = o
+print("Hello"[-2]) - Output = l
+
+Integers
+"12345" is a string
+12345 is an integer
+
+Floats
+numbers with decimals.
+123.45
+
+Boolean
+True or False
+
+
+2. Type error, checking and conversions.
+
+print(len(12345)) = wrong
+print(len("12345")) = right
+
+Len can not work with an int, only with a string.
+
+Checking data types / Type hecking
+print(type("Hello")) - output: class str
+print(type(12345)) - output: class int
+print(type(123.45)) - output: class float
+print(type(True)) - output: class bool
+
+Converting data types / Type conversion or Type casting
+int("123") - convert string to int
+print("123 + 456") - output = 123456
+print(int("123") + int("456")) - output = 579
+
+3. Mathematical Operations
+
++ - Addition
+- - Subtraction
+* - Multiplication
+/ - Devision
+// - Devision - Output is an integer.  Beware!  Removes decimals from non whole numbers.
+** - To the power of e.g. (2**3) = 8
+
+Remember PEMDAS
+
+Parentheses
+Exponmants
+Multiplication / Division
+Addition - Subtraction
+
+4. Number Manipulation
+
+Round
+e.g.
+bmi=84/1.65**2
+print(bmi) output: 30.85299449035813
+print(int(bmi)) output: 30
+print(round(bmi)) output: 31
+print(round(bmi, 2)) output: 30.85
+
+Assignent Operators
+score=0
+score += 1
+print(score) output: 1
+
+print("Your score is" + str(score))
+
+can be changed using an f-string
+
+e.g.
+
+score = 1
+height = 1.8
+is_winning = True
+
+Take note:  Three differnt data types.
+
+print(f"Your score is = {score}, your height is {height}. You are winning is {is_winning}.")
+
+output:
+
+Your score is 1, your height is 1.8.  You are winning is True.
+
+f-string does all the convertions.
+
+5. Tip calculator
+
+We're going to build a tip calculator.
+
+If the bill was $150.00, split between 5 people, with 12% tip.
+
+Each person should pay:
+
+see tip-calculator.py
+
+print("Welcome to the tip calculator.")
+bill = float(input("What was the total bill? "))
+tip = int(input("How much tip would you like to give? 10, 12, 15? "))
+multiplier = 1 + (tip / 100)
+total_bill = bill * multiplier
+split = input("How many people to split the bill? ")
+per_person = round(total_bill / int(split), 2)
+print(f"Each person should pay: ${per_person}")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
