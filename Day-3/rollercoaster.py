@@ -1,6 +1,7 @@
 child_ticket = 5 # under 12
 youth_ticket = 7 # 12-18
 adult_ticket = 12 # 18 and over
+special = 0
 price = 0
 photo = 3
 
@@ -15,6 +16,9 @@ if height >= 120:
     elif age < 18:
         price = youth_ticket
         print(f"Your ticket price will be ${price}")
+    elif age >= 45 and age <= 55:
+        price = special
+        print("Everything is going to be ok.  Have a free ride on us!")
     else:
         price = adult_ticket
         print (f"Your ticket price will be ${price}")
